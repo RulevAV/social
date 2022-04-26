@@ -1,0 +1,32 @@
+.profile {
+  box-sizing: border-box;
+  padding: 10px;
+
+  &_avatar {
+    margin: auto;
+    width: 150px;
+  }
+
+  &_avatar>img {
+    width: 100%;
+    height: 100%;
+  }
+
+  &_status {
+    box-sizing: border-box;
+    display: block;
+    padding: 5px;
+  }
+
+  &_date {
+    display: block;
+    font-style: italic;
+    padding: 5px;
+  }
+
+  &_gender {
+    display: block;
+    font-style: italic;
+    padding: 5px;
+  }
+}

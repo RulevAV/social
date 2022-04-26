@@ -1,0 +1,77 @@
+@import './btn';
+@import './grid';
+@import './burger';
+@import './MenuUser';
+@import './profile';
+@import './Post';
+
+$header-color: #fff;
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $header-color;
+
+  &-logo {}
+
+  &-nav {
+    flex: 10;
+
+    & li {
+      display: inline;
+      margin-right: 5px;
+      padding: 3px;
+    }
+  }
+}
+
+.ml {
+  &1 {
+    margin-left: 5px;
+  }
+}
+
+.m {
+  &0 {
+    margin: 0;
+  }
+}
+
+.p {
+  &0 {
+    padding: 0;
+  }
+
+  &1 {
+    padding: 5px;
+  }
+}
+
+.w {
+  &-100 {
+    width: 100%;
+  }
+}
+
+.h {
+  &-200 {
+    height: 200px;
+  }
+}
+
+.resize {
+  resize: none
+}
+
+.block {
+  display: block;
+}
+
+.container {
+  display: flex;
+}
+
+.justify-content-end {
+  justify-content: end
+}
