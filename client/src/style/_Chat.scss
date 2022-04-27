@@ -1,11 +1,13 @@
-$inputHeight:50px;
-$header-height: 50px;
-$Chat-header:50px;
+@import './variables';
 
-.Chat {
+$chat-header:50px;
+$chat-futter:50px;
+
+
+.chat {
   &_header {
     box-sizing: border-box;
-    height: $Chat-header;
+    height: $chat-header;
     background-color: white;
     border: 1px solid #000;
     display: flex;
@@ -13,36 +15,28 @@ $Chat-header:50px;
     align-items: center;
 
     &>img {
-      height: 50px;
-      width: 50px;
+      height: 45px;
+      width: 45px;
       border-radius: 20px;
     }
   }
 
-  &_stand {
+  &_body {
     box-sizing: border-box;
     background-color: white;
     border: 1px solid #000;
     border-top: none;
-    height: calc(100vh - #{$header-height} - #{$Chat-header} - #{$inputHeight});
+    height: calc(#{$body-height} - #{$chat-header} - #{$chat-futter});
     overflow-y: scroll;
   }
 
-  &_message {
+  &_futter {
     box-sizing: border-box;
-  }
-
-  &_input {
-    box-sizing: border-box;
-    height: $inputHeight - 10px;
-
-    //margin: 5px;
-  }
-
-  &_avatar {
-    margin: 5px;
-    height: 50px;
-    width: 50px;
-    border-radius: 20px;
+    height: $chat-futter;
+    background-color: white;
+    border: 1px solid #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }

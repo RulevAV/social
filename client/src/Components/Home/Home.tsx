@@ -1,8 +1,8 @@
-import MenuUser from "../MenuUser/MenuUser";
+import MenuWrapper from "../MenuWrapper/MenuWrapper";
 import Posts from "../Posts/Posts";
 
 const Home = () => {
-  return <MenuUser><Posts></Posts></MenuUser>
+  return <MenuWrapper><Posts /></MenuWrapper>
 }
 
 export default Home;

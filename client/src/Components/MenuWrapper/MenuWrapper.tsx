@@ -5,10 +5,10 @@ type PropsType = {
   children: React.ReactNode
 }
 
-const MenuUser: React.FC<PropsType> = ({ children }) => {
+const MenuWrapper: React.FC<PropsType> = ({ children }) => {
   return (
     <div className='row'>
-      <div className='MenuUser-sm-hiden col-sm-3 col-md-2'><Menu /></div>
+      <div className='menuUser-sm-hiden col-sm-3 col-md-2'><Menu /></div>
 
       <div className='col-12 col-sm-9 col-md-10'>
         {children}
@@ -17,4 +17,4 @@ const MenuUser: React.FC<PropsType> = ({ children }) => {
   );
 }
 
-export default MenuUser;
+export default MenuWrapper;

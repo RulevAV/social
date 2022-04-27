@@ -1,10 +1,13 @@
-import Header from "./Header";
 import Message from "./Message";
 
 const Chat = () => {
-  return <div className="Chat" >
-    <Header />
-    <div className="Chat_stand">
+  const src = "https://i.pinimg.com/originals/81/23/a7/8123a79dd47d4d8097a4c36a8a01f4d4.jpg";
+  return <div className="chat" >
+    <div className="chat_header">
+      <img src={src} />
+      <h1>User1</h1>
+    </div>
+    <div className="chat_body">
       <Message />
       <Message />
       <Message />
@@ -23,8 +26,8 @@ const Chat = () => {
       <Message />
       <Message />
     </div>
-    <div className="Chat_input row">
-      <textarea className="col resize" />
+    <div className="chat_futter ">
+      <textarea className="col resize m1" />
       <button className="btn btn-success">Отправить</button>
     </div>
   </div>

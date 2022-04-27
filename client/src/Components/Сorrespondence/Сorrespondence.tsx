@@ -1,28 +1,26 @@
 import ItemUser from "./ItemUser";
 
 const Correspondence = () => {
-  return <div className="body overflow">
-    <div className="container">
-      <ItemUser />
-      <ItemUser />
-      <ItemUser />
-      <ItemUser />
-      <ItemUser />
-      <ItemUser />
-      <ItemUser />
-      <ItemUser />
-      <ItemUser />
-      <ItemUser />
-      <ItemUser />
-      <ItemUser />
-      <ItemUser />
-      <ItemUser />
-      <ItemUser />
-      <ItemUser />
-      <ItemUser />
-      <ItemUser />
-    </div>
-  </div>
+  return <ul className="container correspondence">
+    <ItemUser />
+    <ItemUser />
+    <ItemUser />
+    <ItemUser />
+    <ItemUser />
+    <ItemUser />
+    <ItemUser />
+    <ItemUser />
+    <ItemUser />
+    <ItemUser />
+    <ItemUser />
+    <ItemUser />
+    <ItemUser />
+    <ItemUser />
+    <ItemUser />
+    <ItemUser />
+    <ItemUser />
+    <ItemUser />
+  </ul>
 }
 
 export default Correspondence;
