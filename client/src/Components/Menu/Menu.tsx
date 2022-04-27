@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 function Menu() {
   return (
     <ul className="MenuUser">
-      <li><Link to="/Messages" >Сообщения</Link></li>
+      <li><Link to="/Correspondence" >Переписки</Link></li>
       <li>Музыка</li>
       <li>Видео</li>
       <li>Галерея</li>

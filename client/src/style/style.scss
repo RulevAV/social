@@ -6,6 +6,8 @@
 @import './Post';
 @import './MessageListUser';
 @import './Chat';
+@import './login';
+@import './color';
 
 $header-color: #fff;
 $header-height: 50px;
@@ -28,6 +30,11 @@ $header-height: 50px;
       padding: 3px;
     }
   }
+}
+
+.body {
+  width: 100vw;
+  height: calc(100vh - #{$header-height});
 }
 
 .ml {
@@ -86,4 +93,20 @@ $header-height: 50px;
 
 .justify-content-end {
   justify-content: end
+}
+
+.justify-content-between {
+  justify-content: space-between
+}
+
+.justify-content-center {
+  justify-content: center
+}
+
+.align-items-center {
+  align-items: center
+}
+
+.flex {
+  display: flex;
 }

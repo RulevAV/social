@@ -23,12 +23,9 @@ function Header() {
       </label>
 
       <ul className="menu__box">
-        <li><a className="menu__item" href="#">Главная</a></li>
-        <li><a className="menu__item" href="#">Проекты</a></li>
-        <li><a className="menu__item" href="#">Команда</a></li>
-        <li><a className="menu__item" href="#">Блог</a></li>
-        <li><a className="menu__item" href="#">Контакты</a></li>
-        <li>  <button className='btn btn-outline-success'>Войти</button></li>
+        <li><Link to="/" >Главная</Link></li>
+        <li><Link to="/Profile" >Профиль</Link></li>
+        <li><button className='btn btn-outline-success'>Войти</button></li>
       </ul>
     </header>
   );
