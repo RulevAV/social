@@ -4,14 +4,18 @@
 @import './MenuUser';
 @import './profile';
 @import './Post';
+@import './MessageListUser';
+@import './Chat';
 
 $header-color: #fff;
+$header-height: 50px;
 
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: $header-color;
+  height: $header-height;
 
   &-logo {}
 
@@ -36,6 +40,10 @@ $header-color: #fff;
   &0 {
     margin: 0;
   }
+
+  &1 {
+    margin: 5px;
+  }
 }
 
 .p {
@@ -45,6 +53,10 @@ $header-color: #fff;
 
   &1 {
     padding: 5px;
+  }
+
+  &2 {
+    padding: 10px;
   }
 }
 

@@ -1,0 +1,45 @@
+$inputHeight:50px;
+$header-height: 50px;
+$Chat-header:50px;
+
+.Chat {
+  &_header {
+    height: $Chat-header;
+    background-color: white;
+    border: 1px solid #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &>img {
+      height: 50px;
+      width: 50px;
+      border-radius: 20px;
+    }
+  }
+
+  &_stand {
+    background-color: white;
+    border: 1px solid #000;
+    border-top: none;
+    height: calc(100vh - #{$header-height} - #{$Chat-header} - #{$inputHeight});
+    overflow-y: scroll;
+  }
+
+  &_message {
+    box-sizing: border-box;
+  }
+
+  &_input {
+    background-color: rgb(92, 193, 98);
+    height: $inputHeight;
+
+  }
+
+  &_avatar {
+    margin: 5px;
+    height: 50px;
+    width: 50px;
+    border-radius: 20px;
+  }
+}

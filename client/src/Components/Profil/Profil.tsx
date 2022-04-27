@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import Menu from "../Menu/Menu";
 import Posts from "../Posts/Posts";
 
 function Profil() {
@@ -7,16 +8,8 @@ function Profil() {
       <div className="col-12 col-sm-4 col-md-3 col-lg-2">
         <div className="profile_avatar">
           <img src="https://i.pinimg.com/originals/81/23/a7/8123a79dd47d4d8097a4c36a8a01f4d4.jpg" />
-          <div className="row">
-            <a className="col-12">Сообщения</a>
-            <a className="col-12">Музыка</a>
-            <a className="col-12">Видео</a>
-            <a className="col-12">Галерея</a>
-            <a className="col-12">Друзья</a>
-          </div>
+          <Menu />
         </div>
-
-
       </div>
 
       <div className="col-12 col-sm-8 col-md-9 col-lg-10">
