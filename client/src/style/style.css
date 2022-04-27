@@ -773,6 +773,11 @@
   color: #dc3444;
 }
 
+.correspondence_avatar {
+  width: 50px;
+  height: 50px;
+}
+
 .header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -845,9 +850,8 @@
 }
 
 .container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  margin: auto;
+  max-width: 500px;
 }
 
 .justify-content-end {
@@ -878,5 +882,9 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.overflow {
+  overflow: scroll;
 }
 /*# sourceMappingURL=style.css.map */

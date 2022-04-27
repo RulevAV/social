@@ -8,6 +8,7 @@
 @import './Chat';
 @import './login';
 @import './color';
+@import'./correspondence';
 
 $header-color: #fff;
 $header-height: 50px;
@@ -88,7 +89,9 @@ $header-height: 50px;
 }
 
 .container {
-  display: flex;
+  margin: auto;
+  max-width: 500px;
+
 }
 
 .justify-content-end {
@@ -109,4 +112,8 @@ $header-height: 50px;
 
 .flex {
   display: flex;
+}
+
+.overflow {
+  overflow: scroll;
 }
