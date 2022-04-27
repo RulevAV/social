@@ -25,7 +25,7 @@ const Chat = () => {
     </div>
     <div className="Chat_input row">
       <textarea className="col resize" />
-      <button className="btn btn-saccess">Отправить</button>
+      <button className="btn btn-success">Отправить</button>
     </div>
   </div>
 }

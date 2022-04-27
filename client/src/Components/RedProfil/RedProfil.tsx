@@ -36,7 +36,7 @@ function RedProfil() {
             <option >Женский</option>
           </select>
         </label>
-        <div className="container justify-content-end">
+        <div className="row justify-content-end">
           <button className="btn btn-outline-success">Сохранить</button>
         </div>
 

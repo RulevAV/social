@@ -4,6 +4,7 @@ $Chat-header:50px;
 
 .Chat {
   &_header {
+    box-sizing: border-box;
     height: $Chat-header;
     background-color: white;
     border: 1px solid #000;
@@ -19,6 +20,7 @@ $Chat-header:50px;
   }
 
   &_stand {
+    box-sizing: border-box;
     background-color: white;
     border: 1px solid #000;
     border-top: none;
@@ -31,9 +33,10 @@ $Chat-header:50px;
   }
 
   &_input {
-    background-color: rgb(92, 193, 98);
-    height: $inputHeight;
+    box-sizing: border-box;
+    height: $inputHeight - 10px;
 
+    //margin: 5px;
   }
 
   &_avatar {

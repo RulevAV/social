@@ -713,6 +713,8 @@
 }
 
 .Chat_header {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   height: 50px;
   background-color: white;
   border: 1px solid #000;
@@ -734,6 +736,8 @@
 }
 
 .Chat_stand {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   background-color: white;
   border: 1px solid #000;
   border-top: none;
@@ -747,8 +751,9 @@
 }
 
 .Chat_input {
-  background-color: #5cc162;
-  height: 50px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 40px;
 }
 
 .Chat_avatar {
