@@ -3,6 +3,7 @@ import { createConnection } from "typeorm";
 import express from "express";
 import dotenv from 'dotenv';
 import { userRoutes } from "./routes/user";
+import { postRoutes } from "./routes/post";
 dotenv.config();
 
 const app = express();
@@ -13,6 +14,7 @@ app.use(cors())
 app.use(express.json());
 
 app.use("/", userRoutes);
+app.use("/", postRoutes);
 
 app.listen(PORT, async () => {
   console.log(`Server running at http://localhost:${PORT}`)

@@ -1,8 +1,9 @@
-import { BeforeInsert, Column, Entity } from "typeorm";
+import { BeforeInsert, Column, Entity, OneToMany } from "typeorm";
 import Model from "./utils/Model";
 import bcrypt from "bcrypt";
 import { IsEmail, Length } from "class-validator";
 import { Exclude } from "class-transformer";
+import Post from "./Post";
 
 @Entity("users")
 export default class User extends Model {
@@ -22,10 +23,10 @@ export default class User extends Model {
   @Column()
   password: string;
 
-  @Column()
+  @Column({ nullable: true, })
   avatar: string;
 
-  @Column()
+  @Column({ nullable: true, })
   description: string;
 
   @BeforeInsert()
@@ -36,4 +37,10 @@ export default class User extends Model {
   async passwordCheck(password: string) {
     return bcrypt.compare(password, this.password);
   }
+
+  @OneToMany(
+    () => Post,
+    post => post
+  )
+  posts: Post[]
 }
