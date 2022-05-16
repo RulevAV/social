@@ -4,18 +4,55 @@ import Post from "../entities/Post";
 import User from "../entities/User";
 import authentificationToken, { CustomRequest } from "../middleware/middleware";
 
+const portion = 2;
+
 const postRoutes = express.Router();
 
 postRoutes.get('/api/post', authentificationToken, async (req: CustomRequest, res: Response) => {
   const user = req.user as User;
-  const list = await Post.findBy({ user: { id: user.id } })
+  let page = Number.parseInt(req.query.page as string);
 
-  return res.status(200).json(list);
+  if (isNaN(page))
+    return res.status(200).json({ message: `${page} is not number ` });
+
+  const count = await Post.countBy({ user: { id: user.id } });
+
+  const residue = count % portion;
+  const sizePage = Math.floor(count / portion) + (residue ? 0 : 1);
+
+  const list = await Post.find({
+    skip: page * portion,
+    take: portion,
+    order: {
+      createdAt: "ASC",
+    },
+    where: { user: { id: user.id } }
+  });
+
+  return res.status(200).json({ list, sizePage, page });
 })
 
-postRoutes.get('/api/allpost', authentificationToken, async (_: CustomRequest, res: Response) => {
-  const list = await Post.find();
-  return res.status(200).json(list);
+postRoutes.get('/api/allpost', authentificationToken, async (req: CustomRequest, res: Response) => {
+  let page = Number.parseInt(req.query.page as string);
+
+  if (isNaN(page))
+    return res.status(200).json({ message: `${page} is not number ` });
+
+  const count = await Post.count();
+
+  const residue = count % portion;
+  const sizePage = Math.floor(count / portion) + (residue ? 0 : 1);
+
+  const list = await Post.find({
+    skip: page * portion,
+    take: portion,
+    order: {
+      createdAt: "ASC",
+    },
+  });
+
+
+  return res.status(200).json({ list, sizePage, page });
 })
 
 postRoutes.post('/api/post', authentificationToken, async (req: CustomRequest, res: Response) => {
