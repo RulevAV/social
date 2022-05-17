@@ -4,6 +4,7 @@ import express from "express";
 import dotenv from 'dotenv';
 import { userRoutes } from "./routes/user";
 import { postRoutes } from "./routes/post";
+import { messageRoutes } from "./routes/message";
 dotenv.config();
 
 const app = express();
@@ -15,6 +16,7 @@ app.use(express.json());
 
 app.use("/", userRoutes);
 app.use("/", postRoutes);
+app.use("/", messageRoutes);
 
 app.listen(PORT, async () => {
   console.log(`Server running at http://localhost:${PORT}`)
