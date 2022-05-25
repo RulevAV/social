@@ -1,4 +1,4 @@
-import './style/style.css';
+import './style/style.scss';
 import Header from './Components/Header/Header';
 import Profil from './Components/Profil/Profil';
 import { Route, Routes } from 'react-router-dom';
